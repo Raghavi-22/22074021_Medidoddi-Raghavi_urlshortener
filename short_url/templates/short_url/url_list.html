@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Short URL List</title>
+</head>
+<body>
+    <h1>Short URL List</h1>
+    <ul>
+        {% for url in urls %}
+            <li><a href="{{ url.short_code }}" target="_blank">{{ url.short_code }}</a> - {{ url.long_url }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
